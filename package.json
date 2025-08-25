@@ -1,0 +1,24 @@
+{
+  "name": "proyecto_nodejs_diazvladimir-espinelandres",
+  "version": "1.0.0",
+  "description": "// ================== DOCUMENTACIÓN DEL MODELO DE DATOS EN MONGODB ==================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladimirDiazContreras/Proyecto_NodeJS_DiazVladimir-EspinelAndres.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladimirDiazContreras/Proyecto_NodeJS_DiazVladimir-EspinelAndres/issues"
+  },
+  "homepage": "https://github.com/VladimirDiazContreras/Proyecto_NodeJS_DiazVladimir-EspinelAndres#readme",
+  "dependencies": {
+    "inquirer": "^12.9.4",
+    "nodemon": "^3.1.10",
+    "readline": "^1.3.0"
+  }
+}
