@@ -1,4 +1,3 @@
-## Proyecto de Node JS Vladimir Diaz - Andres Espinel 
 // ================== DOCUMENTACIÓN DEL MODELO DE DATOS EN MONGODB ==================
 
 /*
@@ -9,26 +8,23 @@
 
 // ================== CLIENTES ==================
 /*
-  #Colección 'clientes': Almacena información sobre los clientes de la empresa.
+  Colección 'clientes': Almacena información sobre los clientes de la empresa.
   Campos:
   - _id: ObjectId, identificador único del cliente.
   - nombre: String, nombre completo del cliente.
   - correo: String, dirección de correo electrónico.
   - telefono: String, número de teléfono.
 */
-``` js
 db.clientes.insertMany([
   { _id: ObjectId("64c1a1111111111111111111"), nombre: "Juan Pérez", correo: "juan.perez@example.com", telefono: "3001111111" },
   { _id: ObjectId("64c1a1111111111111111112"), nombre: "María Gómez", correo: "maria.gomez@example.com", telefono: "3002222222" },
   { _id: ObjectId("64c1a1111111111111111113"), nombre: "Carlos Ruiz", correo: "carlos.ruiz@example.com", telefono: "3003333333" },
   { _id: ObjectId("64c1a1111111111111111114"), nombre: "Ana Torres", correo: "ana.torres@example.com", telefono: "3004444444" },
   { _id: ObjectId("64c1a1111111111111111115"), nombre: "Luis Fernández", correo: "luis.fernandez@example.com", telefono: "3005555555" }
-
 ]);
-```
 
 // ================== USUARIOS ==================
-
+/*
   Colección 'usuarios': Contiene los datos de los empleados o personal de la empresa.
   Campos:
   - _id: ObjectId, identificador único del usuario.
@@ -36,7 +32,6 @@ db.clientes.insertMany([
   - correo: String, dirección de correo electrónico.
   - telefono: String, número de teléfono.
 */
-``` js
 db.usuarios.insertMany([
   { _id: ObjectId("64c1b2222222222222222221"), nombre: "Pedro López", correo: "pedro.lopez@example.com", telefono: "3101111111" },
   { _id: ObjectId("64c1b2222222222222222222"), nombre: "Laura Sánchez", correo: "laura.sanchez@example.com", telefono: "3102222222" },
@@ -44,7 +39,6 @@ db.usuarios.insertMany([
   { _id: ObjectId("64c1b2222222222222222224"), nombre: "Sofía Morales", correo: "sofia.morales@example.com", telefono: "3104444444" },
   { _id: ObjectId("64c1b2222222222222222225"), nombre: "Diego Castillo", correo: "diego.castillo@example.com", telefono: "3105555555" }
 ]);
-```
 
 // ================== PROPUESTAS ==================
 /*
@@ -55,12 +49,11 @@ db.usuarios.insertMany([
   - id_usuario: ObjectId, referencia al usuario que creó la propuesta.
   - id_cliente: ObjectId, referencia al cliente de la propuesta.
 */
-``` js
 db.propuestas.insertMany([
   { _id: ObjectId("64c1c3333333333333333331"), estado: "Aprobada", id_usuario: ObjectId("64c1b2222222222222222221"), id_cliente: ObjectId("64c1a1111111111111111111") },
   { _id: ObjectId("64c1c3333333333333333332"), estado: "Aprobada", id_usuario: ObjectId("64c1b2222222222222222222"), id_cliente: ObjectId("64c1a1111111111111111112") }
 ]);
-```
+
 // ================== PROYECTOS ==================
 /*
   Colección 'proyectos': Contiene los proyectos activos que se están desarrollando.
@@ -71,12 +64,11 @@ db.propuestas.insertMany([
   - id_cliente: ObjectId, referencia al cliente del proyecto.
   - id_propuesta: ObjectId, referencia a la propuesta que originó el proyecto.
 */
-``` js
 db.proyectos.insertMany([
   { _id: ObjectId("64c1d4444444444444444441"), estado: "En Progreso", id_usuario: ObjectId("64c1b2222222222222222221"), id_cliente: ObjectId("64c1a1111111111111111111"), id_propuesta: ObjectId("64c1c3333333333333333331") },
   { _id: ObjectId("64c1d4444444444444444442"), estado: "Planeación", id_usuario: ObjectId("64c1b2222222222222222222"), id_cliente: ObjectId("64c1a1111111111111111112"), id_propuesta: ObjectId("64c1c3333333333333333332") }
 ]);
-```
+
 // ================== CONTRATOS ==================
 /*
   Colección 'contratos': Almacena los acuerdos formales relacionados con los proyectos.
@@ -88,12 +80,11 @@ db.proyectos.insertMany([
   - descripcion: String, descripción detallada del contrato.
   - estado: String, estado del contrato (ej. "Activo", "Vencido").
 */
-``` js
 db.contratos.insertMany([
   { _id: ObjectId("64c1e5555555555555555551"), id_proyecto: ObjectId("64c1d4444444444444444441"), fecha_inicio: ISODate("2025-01-01"), fecha_fin: ISODate("2025-06-01"), descripcion: "Contrato para desarrollo de sistema de ventas", estado: "Activo" },
   { _id: ObjectId("64c1e5555555555555555552"), id_proyecto: ObjectId("64c1d4444444444444444442"), fecha_inicio: ISODate("2025-02-01"), fecha_fin: ISODate("2025-07-01"), descripcion: "Contrato para app móvil de clientes", estado: "Activo" }
 ]);
-```
+
 // ================== GESTION FINANCIERA ==================
 /*
   Colección 'gestion_financiera': Registra los movimientos financieros de cada proyecto.
@@ -106,7 +97,6 @@ db.contratos.insertMany([
   - fecha: ISODate, fecha del movimiento.
   - monto: Number, cantidad del movimiento financiero.
 */
-``` js
 db.gestion_financiera.insertMany([
   // Movimientos para el Proyecto 1
   { _id: ObjectId("64c1f6666666666666666661"), id_proyecto: ObjectId("64c1d4444444444444444441"), descripcion: "Pago inicial", presupuesto: 1000000, tipo_movimiento: "Ingreso", fecha: ISODate("2025-01-05"), monto: 500000 },
@@ -118,4 +108,3 @@ db.gestion_financiera.insertMany([
   { _id: ObjectId("64c1f6666666666666666672"), id_proyecto: ObjectId("64c1d4444444444444444442"), descripcion: "Licencias de software", presupuesto: 1500000, tipo_movimiento: "Egreso", fecha: ISODate("2025-02-20"), monto: 250000 },
   { _id: ObjectId("64c1f6666666666666666673"), id_proyecto: ObjectId("64c1d4444444444444444442"), descripcion: "Segundo abono cliente", presupuesto: 1500000, tipo_movimiento: "Ingreso", fecha: ISODate("2025-04-01"), monto: 400000 }
 ]);
-```
