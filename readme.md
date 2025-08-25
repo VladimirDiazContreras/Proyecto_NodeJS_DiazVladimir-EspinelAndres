@@ -1,4 +1,5 @@
-## Proyecto de Node JS Vladimir Diaz - Andres Espinel 
+## Proyecto de Node JS Vladimir Diaz - Andres Espinel - Edgar Acevedo
+
 // ================== DOCUMENTACIÓN DEL MODELO DE DATOS EN MONGODB ==================
 
 /*
