@@ -1,15 +1,11 @@
-const readline = require('readline');
+const rl = require('../config/rl');  // ya no creas un nuevo readline
+
 const {
   crearCliente,
   listarClientes,
   actualizarCliente,
   eliminarCliente
 } = require('../controllers/clienteController');
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
 
 function menuClientes(callbackVolver) {
   console.clear();

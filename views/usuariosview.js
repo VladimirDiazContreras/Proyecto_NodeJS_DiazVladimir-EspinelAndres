@@ -1,4 +1,4 @@
-const readline = require('readline');
+const rl = require('../config/rl');  // ya no creas un nuevo readline
 const {
   crearUsuario,
   listarUsuarios,
@@ -6,10 +6,7 @@ const {
   eliminarUsuario
 } = require('../controllers/usuariocontroller');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+
 
 function menuUsuarios(callbackVolver) {
   console.clear();

@@ -5,29 +5,41 @@ async function getCollection() {
   return db.collection('usuarios');
 }
 
-async function crearUsuario(correo, contrasena) {
+// ✅ Crear usuario con todos los campos
+async function crearUsuario(correo, contrasena, nombre, telefono) {
   const col = await getCollection();
-  return await col.insertOne({ correo, contraseña: contrasena });
+  const nuevo = { correo, contraseña: contrasena, nombre, telefono };
+  return await col.insertOne(nuevo);
 }
 
+// ✅ Listar todos los usuarios
 async function listarUsuarios() {
   const col = await getCollection();
   return await col.find().toArray();
 }
 
-async function actualizarUsuario(correo, nuevaContrasena) {
+// ✅ Actualizar TODOS los datos de un usuario (por correo)
+async function actualizarUsuario(correo, nuevosDatos) {
   const col = await getCollection();
   return await col.updateOne(
     { correo },
-    { $set: { contraseña: nuevaContrasena } }
+    { $set: {
+        nombre: nuevosDatos.nombre,
+        telefono: nuevosDatos.telefono,
+        contraseña: nuevosDatos.contraseña,
+        correo: nuevosDatos.correo   // por si también se quiere cambiar
+      }
+    }
   );
 }
 
+// ✅ Eliminar usuario por correo
 async function eliminarUsuario(correo) {
   const col = await getCollection();
   return await col.deleteOne({ correo });
 }
 
+// ✅ Buscar usuario por credenciales (login)
 async function buscarUsuarioPorCredenciales(correo, contrasena) {
   const col = await getCollection();
   return await col.findOne({ correo, contraseña: contrasena });
@@ -40,3 +52,4 @@ module.exports = {
   eliminarUsuario,
   buscarUsuarioPorCredenciales
 };
+

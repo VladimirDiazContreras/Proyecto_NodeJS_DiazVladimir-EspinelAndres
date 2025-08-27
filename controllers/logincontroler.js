@@ -22,6 +22,8 @@ async function iniciarSesion(correo, contrasena) {
     }
 
     console.log("\n❌ Correo o contraseña incorrectos.");
+    setTimeout(() => require('../views/menu').mostrarMenu(), 3000); // <-- Agregar esta línea para volver al menú después del error.
+
   } catch (err) {
     console.log("\n❌ Error al iniciar sesión:", err.message);
   }

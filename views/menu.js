@@ -1,10 +1,5 @@
-const readline = require('readline');
+const rl = require('../config/rl');
 const { iniciarSesion } = require('../controllers/logincontroler');
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
 
 function mostrarMenu() {
   console.clear();
@@ -19,7 +14,6 @@ function mostrarMenu() {
       rl.question('Correo: ', (correo) => {
         rl.question('Contraseña: ', async (contrasena) => {
           await iniciarSesion(correo, contrasena);
-          setTimeout(mostrarMenu, 3000);
         });
       });
     } else if (opcion === '2') {
