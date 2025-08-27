@@ -1,4 +1,4 @@
-const { mostrarMenu } = require('./views/usuariosview');
+const { mostrarMenu } = require('./views/menu');
 const conectarDB = require('./config/db');
 
 (async () => {

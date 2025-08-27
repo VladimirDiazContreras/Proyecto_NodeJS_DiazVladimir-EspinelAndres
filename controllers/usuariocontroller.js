@@ -1,25 +1,53 @@
 const Usuario = require('../models/usuariomodel');
 
-async function registrarUsuario(usuario, contrasena) {
+async function crearUsuario(nombre, contrasena) {
   try {
-    await Usuario.crearUsuario(usuario.trim(), contrasena.trim());
-    console.log("\n Usuario registrado con éxito.");
+    await Usuario.crearUsuario(nombre.trim(), contrasena.trim());
+    console.log("\n✅ Usuario creado con éxito.");
   } catch (err) {
-    console.log("\n Error al registrar usuario:", err.message);
+    console.log("\n❌ Error al crear usuario:", err.message);
   }
 }
 
-async function iniciarSesion(usuario, contrasena) {
+async function listarUsuarios() {
   try {
-    const user = await Usuario.buscarUsuario(usuario.trim(), contrasena.trim());
-    if (user) {
-      console.log(`\n Bienvenido, ${user.usuario}`);
+    const usuarios = await Usuario.listarUsuarios();
+    console.log("\n📋 Lista de usuarios:");
+    usuarios.forEach(u => console.log(`- ${u.nombre}`));
+  } catch (err) {
+    console.log("\n❌ Error al listar usuarios:", err.message);
+  }
+}
+
+async function actualizarUsuario(nombre, nuevaContrasena) {
+  try {
+    const result = await Usuario.actualizarUsuario(nombre.trim(), nuevaContrasena.trim());
+    if (result.modifiedCount > 0) {
+      console.log("\n✅ Contraseña actualizada correctamente.");
     } else {
-      console.log("\n Usuario o contraseña incorrectos.");
+      console.log("\n⚠️ No se encontró el usuario.");
     }
   } catch (err) {
-    console.log("\n Error al iniciar sesión:", err.message);
+    console.log("\n❌ Error al actualizar usuario:", err.message);
   }
 }
 
-module.exports = { registrarUsuario, iniciarSesion };
+async function eliminarUsuario(nombre) {
+  try {
+    const result = await Usuario.eliminarUsuario(nombre.trim());
+    if (result.deletedCount > 0) {
+      console.log("\n✅ Usuario eliminado correctamente.");
+    } else {
+      console.log("\n⚠️ No se encontró el usuario.");
+    }
+  } catch (err) {
+    console.log("\n❌ Error al eliminar usuario:", err.message);
+  }
+}
+
+module.exports = {
+  crearUsuario,
+  listarUsuarios,
+  actualizarUsuario,
+  eliminarUsuario
+};
