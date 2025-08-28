@@ -37,7 +37,7 @@ En este contexto, se plantea el desarrollo de una aplicación de línea de coman
 
 1- Construcción del Modelo Conceptual
 
-- Tabla Cliente
+- Tabla Cliente :construction_worker:
 
 Descripción: Almacena la información de los clientes registrados en el sistema.
 
@@ -52,7 +52,7 @@ correo: Correo electrónico del cliente (único).
 
 
 
-- Tabla Propuesta
+- Tabla Propuesta :hourglass:
 
 Descripción: Contiene las propuestas asociadas a un cliente.
  Atributos:
@@ -66,7 +66,7 @@ idCliente (FK): Relación con el cliente que la solicitó.
 
 
 
-- Tabla Proyecto
+- Tabla Proyecto :bar_chart:
 
 Descripción: Representa los proyectos generados a partir de propuestas aprobadas.
 
@@ -84,7 +84,7 @@ idPropuesta (FK): Propuesta de la que surge el proyecto.
 
 
 
-- Tabla Usuario
+- Tabla Usuario 	:man:
 Descripción: Registra los datos de usuarios que interactúan en el sistema (gestores, administradores, etc.).
  
 
@@ -99,7 +99,7 @@ correo: Correo electrónico del usuario (único).
 
 
 
-- Tabla Administrativo
+- Tabla Administrativo 	:scroll:
 
 Descripción: Contiene a los usuarios con rol administrativo vinculados directamente a proyectos.
  Atributos:
@@ -131,7 +131,7 @@ idUsuario (FK): Usuario que integra el grupo.
 
 
 
-- Tabla Gestión Financiera
+- Tabla Gestión Financiera :books:
 
 Descripción: Registra los procesos financieros gestionados por usuarios del sistema.
 
@@ -149,7 +149,7 @@ idUsuario (FK): Usuario responsable de la gestión financiera.
 
 
 
-- Tabla Gestión de Pagos
+- Tabla Gestión de Pagos :chart_with_upwards_trend:
 
 Descripción: Almacena los pagos realizados dentro del sistema.
 
@@ -173,7 +173,7 @@ idUsuario (FK): Usuario asociado al registro de pago.
   que vinculan documentos de una colección con documentos de otra.
 */
 
-## // ===== CLIENTES ====
+## // :construction_worker:  ===== CLIENTES ==== :construction_worker:
 /*
   #Colección 'clientes': Almacena información sobre los clientes de la empresa.
   Campos:
@@ -193,7 +193,7 @@ db.clientes.insertMany([
 ]);
 ```
 
-## // ====== USUARIOS ==========
+## // 	:man: ====== USUARIOS ========== 	:man:
 
   Colección 'usuarios': Contiene los datos de los empleados o personal de la empresa.
   Campos:
@@ -212,7 +212,7 @@ db.usuarios.insertMany([
 ]);
 ```
 
-## //===== PROPUESTAS =========
+## //:hourglass:===== PROPUESTAS =========:hourglass:
 /*
   Colección 'propuestas': Registra las propuestas comerciales enviadas a los clientes.
   Campos:
@@ -227,7 +227,7 @@ db.propuestas.insertMany([
   { _id: ObjectId("64c1c3333333333333333332"), estado: "Aprobada", id_usuario: ObjectId("64c1b2222222222222222222"), id_cliente: ObjectId("64c1a1111111111111111112") }
 ]);
 ```
-## // ====== PROYECTOS ======
+## //:bar_chart: ====== PROYECTOS ======:bar_chart:
 /*
   Colección 'proyectos': Contiene los proyectos activos que se están desarrollando.
   Campos:
@@ -243,7 +243,7 @@ db.proyectos.insertMany([
   { _id: ObjectId("64c1d4444444444444444442"), estado: "Planeación", id_usuario: ObjectId("64c1b2222222222222222222"), id_cliente: ObjectId("64c1a1111111111111111112"), id_propuesta: ObjectId("64c1c3333333333333333332") }
 ]);
 ```
-## // ==== CONTRATOS ======
+## // 	:scroll: ==== CONTRATOS ====== 	:scroll:
 /*
   Colección 'contratos': Almacena los acuerdos formales relacionados con los proyectos.
   Campos:
@@ -260,7 +260,7 @@ db.contratos.insertMany([
   { _id: ObjectId("64c1e5555555555555555552"), id_proyecto: ObjectId("64c1d4444444444444444442"), fecha_inicio: ISODate("2025-02-01"), fecha_fin: ISODate("2025-07-01"), descripcion: "Contrato para app móvil de clientes", estado: "Activo" }
 ]);
 ```
-## // === GESTION FINANCIERA =======
+## // :chart_with_upwards_trend: === GESTION FINANCIERA ======= :chart_with_upwards_trend:
 /*
   Colección 'gestion_financiera': Registra los movimientos financieros de cada proyecto.
   Campos:
