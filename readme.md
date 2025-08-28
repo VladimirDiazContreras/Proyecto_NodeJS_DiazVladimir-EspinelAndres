@@ -1,13 +1,13 @@
 # :fire: Proyecto de Node JS Vladimir Diaz - Andres Espinel - Edgar Acevedo :fire:
 
 # :raised_hand: Herramienta de Gestion aplicado en el Proyecto :raised_hand:
-Link: 
+Link: 	:cloud:
 https://diazc04080910-1755863033586.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiMjI3NjhmNGNjYTdjNDA3ZGJjODQ4MzZlNTRiYmIwMDgiLCJwIjoiaiJ9
 
 Nota: Con la herraminta Jira se crea un desglose detallado de las actividades a realizar enmarcando un trabajo ordenado y estructurado para que de esa forma se logre el objetivo
 
 # :raised_hand: Product Backlog :raised_hand:
-Link: 
+Link: 	:cloud:
 https://docs.google.com/document/d/1HU8xuiVEsxjC_8uNe1Kb4n2Fv1vZDI2J_JBolTeEdq8/edit?usp=sharing 
 
 Nota: Aca se refleja el informe de casos de usos o requermientos en un marco metodologico aplicando SCRUM
@@ -20,11 +20,11 @@ En respuesta a esta necesidad, el presente proyecto propone el desarrollo de una
 
 La aplicación hace uso de tecnologías y metodologías modernas, como la programación orientada a objetos, principios SOLID, patrones de diseño y persistencia segura de datos con MongoDB. Así, ofrece una solución robusta, escalable y adaptada a las demandas reales del entorno freelance, optimizando los procesos internos y elevando la calidad de la gestión profesional.
 
-# Modelo Entidad - Relacioón 
+# 	:family: Modelo Entidad - Relacioón 	:family: 
 
 El modelo entidad-relación gestiona clientes, propuestas y proyectos, vinculando usuarios y administrativos en grupos, con soporte para finanzas y pagos. Está diseñado en un enfoque NoSQL, lo que le da mayor flexibilidad para manejar estructuras de datos dinámicas. Las relaciones entre entidades se plantean de forma lógica, priorizando la escalabilidad y la consistencia de la información.
 
-# Caso de Estudio
+# 	:cop: Caso de Estudio	:cop:
 
 La empresa de freelancers gestiona numerosos proyectos para diferentes clientes. Tradicionalmente, la administración de sus actividades se basaba en hojas de cálculo y documentos digitales almacenados en ubicaciones diversas. Este método resultó en múltiples problemas críticos: pérdida frecuente de información, duplicidad de datos, dificultad para mantener actualizados los registros y poco control sobre el estado de los contratos, entregables y finanzas.
 
@@ -33,7 +33,7 @@ A raíz de esta problemática, se evidenció la necesidad de una herramienta cen
 En este contexto, se plantea el desarrollo de una aplicación de línea de comandos (CLI) utilizando Node.js, que permita a la empresa registrar, consultar, modificar y controlar toda la información relevante de su operación: clientes, propuestas, proyectos, contratos, entregables y aspectos financieros. De este modo, se busca transformar el proceso de gestión tradicional en un flujo moderno, confiable y alineado con las mejores prácticas tecnológicas actuales.
 
 
-## Planificación
+## :thought_balloon: Planificación :thought_balloon:
 
 1- Construcción del Modelo Conceptual
 
@@ -288,7 +288,7 @@ db.gestion_financiera.insertMany([
 ]);
 ```
 
-# Desarrollado Por: 
+# Desarrollado Por: :trollface:  
 
 - Andrés David Reyes Espinel
 - Vladímir Díaz Contreras
