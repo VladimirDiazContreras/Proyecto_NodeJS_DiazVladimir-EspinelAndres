@@ -84,7 +84,7 @@ idPropuesta (FK): Propuesta de la que surge el proyecto.
 
 
 
-- Tabla Usuario 	:man:
+- Tabla Usuario 	:trophy:
 Descripción: Registra los datos de usuarios que interactúan en el sistema (gestores, administradores, etc.).
  
 
@@ -99,7 +99,7 @@ correo: Correo electrónico del usuario (único).
 
 
 
-- Tabla Administrativo 	:scroll:
+- Tabla Administrativo 	:dart:
 
 Descripción: Contiene a los usuarios con rol administrativo vinculados directamente a proyectos.
  Atributos:
@@ -116,7 +116,7 @@ idProyecto (FK): Proyecto que administra.
 
 
 
-- Tabla Grupo
+- Tabla Grupo :pencil:
 
 Descripción: Define grupos de trabajo donde participan distintos usuarios.
 
