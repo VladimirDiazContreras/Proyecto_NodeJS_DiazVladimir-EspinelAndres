@@ -1,5 +1,16 @@
+<div align="center">
+
 # PROYECTO NODE.JS
 
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+
+**Vladmir Diaz Contreras**  
+**Andrés David Reyes Espinel**
+**Edgar Leonardo Acevedo Arteaga **
 
 
 
@@ -7,45 +18,306 @@
 
 
 
+&nbsp;  
+&nbsp;  
+ 
+**GRUPO S1 CAJASAN**  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+
+*DOCENTE**
+**INGENIERO PEDRO FELIPE GÓMEZ BONILLA**  
+
+&nbsp;  
+&nbsp;  
+&nbsp;  
+
+**CAMPUSLANDS**  
+**Cajasan**  
+**RUTA NODEJS**  
+**BUCARAMANGA**  
+**CAJASAN**
+**2025**
+<br>
+</div>
+<br>
+
+#
+
+<br>
+<br>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Tabla de Contenidos
+
+- [Introducción](#introducción)
+- [Caso de Estudio](#caso-de-estudio)
+- [Planificación](#planificación)
+- [Construcción del Modelo Conceptual](#construcción-del-modelo-conceptual)
+  - [Descripción](#descripción)
+  - [Gráfica](#gráfica)
+  - [Descripción Técnica](#descripción-técnica)
+- [Construcción del Modelo Lógico](#construcción-del-modelo-lógico)
+  - [Descripción](#descripción-1)
+  - [Gráfica](#gráfica-1)
+  - [Descripción Técnica](#descripción-técnica-1)
+- [Normalización del Modelo Lógico](#normalización-del-modelo-lógico)
+  - [Primera Forma Normal (1FN)](#primera-forma-normal-1fn)
+    - [Descripción](#descripción-2)
+    - [Gráfica](#gráfica-2)
+    - [Descripción Técnica](#descripción-técnica-2)
+  - [Segunda Forma Normal (2FN)](#segunda-forma-normal-2fn)
+    - [Descripción](#descripción-3)
+    - [Gráfica](#gráfica-3)
+    - [Descripción Técnica](#descripción-técnica-3)
+  - [Tercera Forma Normal (3FN)](#tercera-forma-normal-3fn)
+    - [Descripción](#descripción-4)
+    - [Gráfica](#gráfica-4)
+    - [Descripción Técnica](#descripción-técnica-4)
+- [Construcción del Modelo Físico](#construcción-del-modelo-físico)
+  - [Descripción](#descripción-5)
+  - [Código](#código)
+  - [Descripción Técnica](#descripción-técnica-5)
+- [Diagrama E-R](#diagrama-e-r)
+  - [Descripción](#descripción-6)
+  - [Gráfica](#gráfica-5)
+  - [Descripción Técnica](#descripción-técnica-6)
+- [Tablas](#tablas)
+  - [Descripción](#descripción-7)
+  - [Gráfica](#gráfica-6)
+  - [Descripción Técnica](#descripción-técnica-7)
+- [Relaciones entre Tablas](#relaciones-entre-tablas)
+  - [Descripción](#descripción-8)
+  - [Gráfica](#gráfica-7)
+  - [Descripción Técnica](#descripción-técnica-8)
+- [Inserción de Datos](#inserción-de-datos)
+  - [Descripción](#descripción-9)
+  - [Gráfica](#gráfica-8)
+  - [Descripción Técnica](#descripción-técnica-9)
+- [Referencias](#referencias)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<h2 id="construcción-del-modelo-conceptual">Construcción del Modelo Conceptual</h2>
+
+<h3 id="descripción">Descripción</h3>
+
+<h4>Entidades y atributos principales:</h4>
+
+<ol>
+  <li><strong>Tabla Cliente</strong>
+    <ul>
+      <li><code>idCliente</code></li>
+      <li><code>nombre</code></li>
+      <li><code>Correo</code></li>
+    </ul>
+    <p><strong>Descripción:</strong> Almacena la información de los clientes registrados en el sistema</p>
+  </li>
+
+  <li><strong>Tabla Propuesta</strong>
+    <ul>
+      <li><code>idPropuesta</code></li>
+      <li><code>estado</code></li>
+      <li><code>idCliente</code></li>
+    </ul>
+       <p><strong>Descripción:</strong> Contiene las propuestas asociadas al cliente</p>
+  </li>
+
+  <li><strong>Tabla de Proyecto</strong>
+    <ul>
+      <li><code>idProyecto</code></li>
+      <li><code>estado</code></li>
+      <li><code>idCliente</code></li>
+      <li><code>idPropuesta</code></li>
+    </ul> 
+   <p><strong>Descripción:</strong> Contiene las propuestas asociadas a un cliente</p>
+  </li>
+
+  <li><strong>Tabla de Usuario</strong>
+    <ul>
+      <li><code>idUsuario</code></li>
+      <li><code>nombre</code></li>
+      <li><code>correo</code></li>
+    </ul>
+    <p><strong>Descripción:</strong> Registra los datos de usuarios que interactúan en el sistema (gestores, administradores, etc.).</p>
+  </li>
+
+  <li><strong>Tabla Administrativa</strong>
+    <ul>
+      <li><code>idAdministratio</code></li>
+      <li><code>nombre</code></li>
+      <li><code>correo</code></li>
+      <li><code>idProyecto</code></li>
+    </ul>
+    <p><strong>Descripción:</strong> Contiene a los usuarios con rol administrativo vinculados directamente a proyectos.</p>
+  </li>
+
+   <li><strong>Tabla Grupo</strong>
+    <ul>
+      <li><code>idGrupo</code></li>
+      <li><code>descripcion</code></li>
+      <li><code>idUsuario</code></li>
+    </ul>
+    <p><strong>Descripción:</strong> Define grupos de trabajo donde participan distintos usuarios.</p>
+  </li>
+
+   <li><strong>Tabla Gestion financiera </strong>
+    <ul>
+      <li><code>idFinanza</code></li>
+      <li><code>nombre</code></li>
+      <li><code>correo</code></li>
+      <li><code>idUsuario</code></li>
+    </ul>
+    <p><strong>Descripción:</strong> Registra los procesos financieros gestionados por usuarios del sistema  </p>
+  </li>
+
+   <li><strong>Tabla Gestion de Pagos</strong>
+    <ul>
+      <li><code>idPago</code></li>
+      <li><code>descripcion</code></li>
+      <li><code>idUsuarios</code></li>
+    </ul>
+    <p><strong>Descripción:Almacena los pagos realizados dentro del sistema </strong> </p>
+  </li>
+</ol>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h3 id="gráfica">Gráfica</h3>
+
+<div align="center">
+  <img src="./img/DiagramaModeloConseptual.png" alt="Modelo Conceptual" width="800px">
+  <br><br>
+  <a href="https://drive.google.com/file/d/1TrpyUwY_rDEoA1gYqghtMEs9JYpaQpoM/view?usp=sharing" target="_blank"> 🔗 Ver en Draw.io</a>
+</div>
+
+<h3 id="descripción-técnica">Descripción Técnica</h3>
+
+<p>
+  El modelo conceptual del Proyecto node.js se define a través de entidades clave y sus relaciones, sin tener en cuenta el almacenamiento físico.
+  Las principales entidades son: <strong>Hospital</strong>, <strong>Médico</strong>, <strong>Administrativo</strong>, <strong>Paciente</strong>,
+  <strong>Historia Clínica</strong>, <strong>EPS</strong> y <strong>Director de EPS</strong>.
+</p>
+
+<p>
+  Cada hospital tiene atributos como <code>_id</code>, nombre, dirección, teléfono y lista de áreas.
+  Los hospitales se relacionan con médicos y personal administrativo mediante el campo <code>hospital_id</code>.
+</p>
+
+<p>
+  Los médicos se caracterizan por su identificación única, nombre, especialidad, área de trabajo, obligaciones,
+  y están conectados a los pacientes por medio del subdocumento historia clínica.
+</p>
+
+<p>
+  El personal administrativo posee nombre, cargo, hospital asociado y una lista de obligaciones.
+</p>
+
+<p>
+  Los pacientes incluyen datos personales, su EPS asociada (<code>eps_id</code>), obligaciones,
+  y una colección de historias clínicas que representan la atención médica recibida,
+  con información como fecha, motivo, diagnóstico, médico tratante y tratamiento.
+</p>
+
+<p>
+  La entidad <strong>EPS</strong> contiene información propia y un subdocumento llamado <strong>Director_EPS</strong>,
+  el cual guarda datos del director junto con sus responsabilidades.
+  Las EPS pueden estar asociadas a múltiples pacientes.
+</p>
+<p>
+  Este modelo permite visualizar un sistema hospitalario completo, distribuido en diferentes capas administrativas y clínicas,
+  con relaciones estructuradas entre los actores del sistema de salud.
+</p>
+<h2 id="construcción-del-modelo-lógico">Construcción del Modelo Lógico</h2>
+
+<h3 id="descripción-1">Descripción</h3>
+
+<p>
+  El modelo lógico de esta base de datos en MongoDB representa una estructura orientada a documentos, con relaciones referenciales suaves (no estrictas) mediante UUIDs.
+  El diseño se organiza en las siguientes entidades:
+</p>
+
+<ul>
+  <li>
+    <strong>Hospitales:</strong> Es una entidad principal que contiene atributos como <code>_id</code> (UUID), <code>nombre</code>, <code>dirección</code>, <code>teléfono</code>,
+    y un array de <code>áreas</code> que representa los distintos servicios ofrecidos.
+    Cada hospital puede estar relacionado con múltiples médicos y administrativos.
+  </li>
+
+  <li>
+    <strong>Médicos:</strong> Se relacionan con hospitales a través del campo <code>hospitalId</code>,
+    actuando como una clave foránea lógica hacia <code>hospitales._id</code>.
+    Incluyen atributos como <code>nombre</code>, <code>área</code>, <code>especialidad</code>, <code>registro_medico</code> y un array de <code>obligaciones</code>.
+  </li>
+
+  <li>
+    <strong>Administrativos:</strong> También se relacionan con hospitales mediante <code>hospitalId</code>
+    y almacenan datos como <code>nombre</code>, <code>cargo</code> y sus <code>obligaciones</code>, similares a los médicos.
+  </li>
+
+  <li>
+    <strong>Pacientes:</strong> Esta entidad incluye datos de identificación personal, <code>epsId</code> (referencia lógica a EPS),
+    y un array embebido <code>historia_clinica</code>.
+    Cada entrada de la historia clínica incluye los campos: <code>fecha</code>, <code>motivo</code>, <code>diagnóstico</code>, <code>tratamiento</code> y <code>medicoId</code> (como referencia lógica).
+  </li>
+</ul>
+
+<p>
+  En conjunto, el modelo lógico usa referencias por UUID para establecer relaciones entre documentos, evita <em>joins</em> complejos al embedir información relevante (como la historia clínica),
+  y favorece la consulta eficiente en contextos médicos, manteniendo una estructura flexible y escalable.
+</p>
+
+<h3 id="gráfica-1">Gráfica</h3>
+
+<div align="center">
+  <img src="./img/DiagramaMermaid.png" alt="Modelo Conceptual" width="800px">
+  <br><br>
+  <a href="https://mermaid.live/edit#pako:eNqlVttuozAQ_RXk56RK7w1viLBbpAQqSPdhFSlyYUKsBRsZU22b5N_XJtwKpJvd8hTbx2cuZ8aTHQpYCEhHwGcERxwnK6rJb2E7vjF_nmn7_XjMdpr15Gu6xiHKYzyMeHT9J3tpzCUsy1PgrySTyCNW3S5hT4ZpW87SkjC8ITEp2ertAxuP93vt0faXrmcba3NuO7ZpSLggQGEALUlNaVgRRkDD2mjtUGXZ8nzXKRyEJI0BD8NMY6G4AkZbBrughTWzTVeZzEhETzD5lvfDNm0FYxsOAVSe1Z502QgN4vwNhlGW883yFpb3AVhqcSSoIiizofwPYQgxkF3IAk5eBtFLz1gaC5Vwt6iBAESjbO1UZfzZnhmzIxDH5L1GFl4pkFTXdB3_ea5cUMAM1iV2DQPgR9dTDrIg5xzWDV-LoyqapgRlAQqpXtC60Au69HhmG98d118eJejofuLOx5R01GgfthU2FiU-bzqjSlcZa6s7QsJJRELWBNAm2R231JcJTmikUZa8cOhtpxwyoAIHhNHeoQw2kIe8dXqoi7RypW-KhH-1HmIBGpW8iUymYD28jA6CAatl5f2XzXIbshQCIuspxGGHvanWrxgQOaesw1wU7OekRUo2EGxxD5YwQV57lK0C_5yZUKHRPAHez3NKsi5v3SVfycEp_dRL_8-8jfrVTNmdh--157kKrLF6IHKOO4Ttt6DPFRaPZDoQdrvlB3ygIQmKHoOsK3LZ__1LgqR9OdlLJifrMFU9L76iK2dxh7aeYmdqUszPs1yATOCQnS7jVsV6Q5RbxvGaUCKzMXy2IZVOaIQiTkKkC57DCEkbCVZLVLCukNhCAiuky58h5r9WaEXVnRTTn4wl1TXO8miL9A2OM7nKU1VP5b-mGqJGLjdZTgXSr-4KCqTv0G-5epheXF9eTic3l5PpZDpCb2rv4ub6_ubh9vp2cjW9u7q7P4zQe2FycvFwf3v4A41k2uo" target="_blank">🔗 Ver en Draw.io</a>
+</div>
 
 
 
-## Andrés David Reyes Espinel
-
-## Vladímir Díaz Contreras
-
-## Edgar Leonardo Acevedo Arteaga 
 
 
+<h3 id="descripción-técnica-1">Descripción Técnica</h3>
 
+<p>
+  El modelo lógico general del sistema hospitalario define múltiples colecciones interrelacionadas en una base de datos MongoDB,
+  representadas por entidades clave.
+</p>
 
+<p>
+  La colección <strong>hospitales</strong> contiene identificadores únicos (<code>_id</code>), junto con datos como <code>nombre</code>, <code>direccion</code>, <code>telefono</code>
+  y una lista de <code>areas</code> que representan las unidades médicas disponibles.
+</p>
 
-## GRUPO S1 CAJASAN
+<p>
+  La colección <strong>medicos</strong> incluye su propio <code>_id</code>, <code>nombre</code>, <code>hospitalId</code> (como referencia lógica al hospital donde labora),
+  <code>area</code>, <code>especialidad</code>, <code>registro_medico</code> y un arreglo de <code>obligaciones</code>.
+</p>
 
+<p>
+  De forma similar, la colección <strong>administrativos</strong> almacena funcionarios vinculados a un hospital mediante el campo <code>hospitalId</code>,
+  con sus respectivos <code>cargos</code> y <code>obligaciones</code>.
+</p>
 
+<p>
+  Por otro lado, la colección <strong>pacientes</strong> incluye campos como <code>_id</code>, <code>nombre</code>, <code>tipo_documento</code>,
+  <code>numero_documento</code>, <code>fecha_nacimiento</code>, <code>direccion</code>, <code>telefono</code>,
+  el identificador de su EPS (<code>epsId</code>), un arreglo de <code>obligaciones</code>,
+  y una subestructura llamada <code>historia_clinica</code>, que es una lista de objetos con los campos <code>fecha</code>, <code>motivo</code>,
+  <code>diagnostico</code>, <code>medicoId</code> (como referencia al médico tratante) y <code>tratamiento</code>.
+</p>
 
-## DOCENTE
-## INGENIERO PEDRO FELIPE GÓMEZ BONILLA 
+<p>
+  Finalmente, la colección <strong>eps</strong> está compuesta por <code>_id</code>, <code>nombre</code>,
+  una lista de <code>responsabilidades</code> y un subdocumento embebido <strong>Director_EPS</strong>,
+  que a su vez incluye un <code>_id</code>, <code>nombre</code>, <code>tipo_de_usuario</code> y sus <code>obligaciones</code>.
+</p>
 
+<p>
+  Las relaciones entre entidades se manejan mediante referencias UUID, sin cambiar la estructura original del JSON,
+  permitiendo una integración lógica limpia y flexible entre hospitales, personal, pacientes y entes externos como las EPS.
+</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-## CAMPUSLANDS
-## SALÓN: S1
-## RUTA: Node.js
-## BUCARAMANGA 
-## 2025
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # :fire: Proyecto de Node JS Vladimir Diaz - Andres Espinel - Edgar Acevedo :fire:
@@ -84,129 +356,6 @@ A raíz de esta problemática, se evidenció la necesidad de una herramienta cen
 En este contexto, se plantea el desarrollo de una aplicación de línea de comandos (CLI) utilizando Node.js, que permita a la empresa registrar, consultar, modificar y controlar toda la información relevante de su operación: clientes, propuestas, proyectos, contratos, entregables y aspectos financieros. De este modo, se busca transformar el proceso de gestión tradicional en un flujo moderno, confiable y alineado con las mejores prácticas tecnológicas actuales.
 
 
-## :thought_balloon: Planificación :thought_balloon:
-
-1- Construcción del Modelo Conceptual
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Tabla Cliente :construction_worker:
-
-Descripción: Almacena la información de los clientes registrados en el sistema.
-
- Atributos:
-idCliente (PK): Identificador único del cliente.
-
-
-nombre: Nombre del cliente.
-
-
-correo: Correo electrónico del cliente (único).
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Tabla Propuesta :hourglass:
-
-Descripción: Contiene las propuestas asociadas a un cliente.
- Atributos:
-idPropuesta (PK): Identificador único de la propuesta.
-
-
-estado: Estado actual de la propuesta (pendiente, aceptada, rechazada).
-
-
-idCliente (FK): Relación con el cliente que la solicitó.
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Tabla Proyecto :bar_chart:
-
-Descripción: Representa los proyectos generados a partir de propuestas aprobadas.
-
- Atributos:
-idProyecto (PK): Identificador único del proyecto.
-
-
-estado: Estado actual del proyecto.
-
-
-idCliente (FK): Cliente al que pertenece el proyecto.
-
-
-idPropuesta (FK): Propuesta de la que surge el proyecto.
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Tabla Usuario:dart:
-  
-Descripción: Registra los datos de usuarios que interactúan en el sistema (gestores, administradores, etc.).
- 
-
-Atributos:
-idUsuario (PK): Identificador único del usuario.
-
-
-nombre: Nombre del usuario.
-
-
-correo: Correo electrónico del usuario (único).
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Tabla Administrativo:memo:
-
-Descripción: Contiene a los usuarios con rol administrativo vinculados directamente a proyectos.
- Atributos:
-idAdministrativo (PK): Identificador único.
-
-
-nombre: Nombre del administrativo.
-
-
-correo: Correo electrónico.
-
-
-idProyecto (FK): Proyecto que administra.
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Tabla Grupo :pencil:
-
-Descripción: Define grupos de trabajo donde participan distintos usuarios.
-
- Atributos:
-idGrupo (PK): Identificador del grupo.
-
-
-descripcion: Breve descripción del grupo.
-
-
-idUsuario (FK): Usuario que integra el grupo.
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Tabla Gestión Financiera :books:
-
-Descripción: Registra los procesos financieros gestionados por usuarios del sistema.
-
- Atributos:
-idFinanza (PK): Identificador único del registro financiero.
-
-
-nombre: Nombre asociado al proceso financiero.
-
-
-correo: Correo electrónico de referencia.
-
-
-idUsuario (FK): Usuario responsable de la gestión financiera.
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Tabla Gestión de Pagos :chart_with_upwards_trend:
-
-Descripción: Almacena los pagos realizados dentro del sistema.
-
- Atributos:
-idPago (PK): Identificador único del pago.
-
-
-descripcion: Concepto del pago.
-
-
-idUsuario (FK): Usuario asociado al registro de pago.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # :collision: ===== DOCUMENTACIÓN DEL MODELO DE DATOS EN MONGODB ========= :collision:
