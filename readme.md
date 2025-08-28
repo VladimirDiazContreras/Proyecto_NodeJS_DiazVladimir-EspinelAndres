@@ -92,6 +92,22 @@
 - [Referencias](#referencias)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Introducción
+
+La gestión eficiente de información es esencial para empresas y profesionales freelance que manejan múltiples proyectos y clientes de forma simultánea. Tradicionalmente, muchas de estas organizaciones dependen de hojas de cálculo y documentos dispersos, lo que conlleva problemas como pérdida de datos, duplicidad de registros y dificultades para el seguimiento integral de los proyectos.
+
+En respuesta a esta necesidad, el presente proyecto propone el desarrollo de una aplicación de línea de comandos (CLI) construida totalmente en Node.js. Esta herramienta está diseñada para centralizar y automatizar la gestión del portafolio profesional de freelancers, permitiendo controlar y organizar clientes, propuestas, contratos, proyectos, entregables y finanzas desde un único sistema.
+
+La aplicación hace uso de tecnologías y metodologías modernas, como la programación orientada a objetos, principios SOLID, patrones de diseño y persistencia segura de datos con MongoDB. Así, ofrece una solución robusta, escalable y adaptada a las demandas reales del entorno freelance, optimizando los procesos internos y elevando la calidad de la gestión profesional.
+
+# Caso de Estudio
+
+La empresa de freelancers gestiona numerosos proyectos para diferentes clientes. Tradicionalmente, la administración de sus actividades se basaba en hojas de cálculo y documentos digitales almacenados en ubicaciones diversas. Este método resultó en múltiples problemas críticos: pérdida frecuente de información, duplicidad de datos, dificultad para mantener actualizados los registros y poco control sobre el estado de los contratos, entregables y finanzas.
+A raíz de esta problemática, se evidenció la necesidad de una herramienta centralizada que permitiera automatizar y sistematizar la gestión de su portafolio profesional. El objetivo es evitar los errores del manejo manual de información y mejorar la eficiencia organizativa, permitiendo a los freelancers dedicar más tiempo a sus proyectos y menos a tareas administrativas.
+
+En este contexto, se plantea el desarrollo de una aplicación de línea de comandos (CLI) utilizando Node.js, que permita a la empresa registrar, consultar, modificar y controlar toda la información relevante de su operación: clientes, propuestas, proyectos, contratos, entregables y aspectos financieros. De este modo, se busca transformar el proceso de gestión tradicional en un flujo moderno, confiable y alineado con las mejores prácticas tecnológicas actuales.
+
+
 <h2 id="construcción-del-modelo-conceptual">Construcción del Modelo Conceptual</h2>
 
 <h3 id="descripción">Descripción</h3>
@@ -188,77 +204,23 @@
 
 <p>
   El modelo conceptual del Proyecto node.js se define a través de entidades clave y sus relaciones, sin tener en cuenta el almacenamiento físico.
-  Las principales entidades son: <strong>Hospital</strong>, <strong>Médico</strong>, <strong>Administrativo</strong>, <strong>Paciente</strong>,
-  <strong>Historia Clínica</strong>, <strong>EPS</strong> y <strong>Director de EPS</strong>.
+  Las principales entidades son: <strong>Clientes</strong>, <strong>Propuestas</strong>, <strong>Proyecto</strong>, <strong>Usuarios</strong>,
+  <strong>Administrativo</strong>, <strong>Grupo</strong>, <strong>Financiera</strong> y <strong>Pagos</strong>..
 </p>
 
-<p>
-  Cada hospital tiene atributos como <code>_id</code>, nombre, dirección, teléfono y lista de áreas.
-  Los hospitales se relacionan con médicos y personal administrativo mediante el campo <code>hospital_id</code>.
+  Este modelo permite visualizar un sistema completo, distribuido en diferentes capas administrativas,
+  con relaciones estructuradas entre los actores del sistema.
 </p>
 
-<p>
-  Los médicos se caracterizan por su identificación única, nombre, especialidad, área de trabajo, obligaciones,
-  y están conectados a los pacientes por medio del subdocumento historia clínica.
-</p>
 
-<p>
-  El personal administrativo posee nombre, cargo, hospital asociado y una lista de obligaciones.
-</p>
-
-<p>
-  Los pacientes incluyen datos personales, su EPS asociada (<code>eps_id</code>), obligaciones,
-  y una colección de historias clínicas que representan la atención médica recibida,
-  con información como fecha, motivo, diagnóstico, médico tratante y tratamiento.
-</p>
-
-<p>
-  La entidad <strong>EPS</strong> contiene información propia y un subdocumento llamado <strong>Director_EPS</strong>,
-  el cual guarda datos del director junto con sus responsabilidades.
-  Las EPS pueden estar asociadas a múltiples pacientes.
-</p>
-<p>
-  Este modelo permite visualizar un sistema hospitalario completo, distribuido en diferentes capas administrativas y clínicas,
-  con relaciones estructuradas entre los actores del sistema de salud.
-</p>
 <h2 id="construcción-del-modelo-lógico">Construcción del Modelo Lógico</h2>
 
 <h3 id="descripción-1">Descripción</h3>
 
 <p>
-  El modelo lógico de esta base de datos en MongoDB representa una estructura orientada a documentos, con relaciones referenciales suaves (no estrictas) mediante UUIDs.
-  El diseño se organiza en las siguientes entidades:
-</p>
+  El modelo entidad-relación gestiona clientes, propuestas y proyectos, vinculando usuarios y administrativos en grupos, con soporte para finanzas y pagos. Está diseñado en un enfoque NoSQL, lo que le da mayor flexibilidad para manejar estructuras de datos dinámicas. Las relaciones entre entidades se plantean de forma lógica, priorizando la escalabilidad y la consistencia de la información.
 
-<ul>
-  <li>
-    <strong>Hospitales:</strong> Es una entidad principal que contiene atributos como <code>_id</code> (UUID), <code>nombre</code>, <code>dirección</code>, <code>teléfono</code>,
-    y un array de <code>áreas</code> que representa los distintos servicios ofrecidos.
-    Cada hospital puede estar relacionado con múltiples médicos y administrativos.
-  </li>
-
-  <li>
-    <strong>Médicos:</strong> Se relacionan con hospitales a través del campo <code>hospitalId</code>,
-    actuando como una clave foránea lógica hacia <code>hospitales._id</code>.
-    Incluyen atributos como <code>nombre</code>, <code>área</code>, <code>especialidad</code>, <code>registro_medico</code> y un array de <code>obligaciones</code>.
-  </li>
-
-  <li>
-    <strong>Administrativos:</strong> También se relacionan con hospitales mediante <code>hospitalId</code>
-    y almacenan datos como <code>nombre</code>, <code>cargo</code> y sus <code>obligaciones</code>, similares a los médicos.
-  </li>
-
-  <li>
-    <strong>Pacientes:</strong> Esta entidad incluye datos de identificación personal, <code>epsId</code> (referencia lógica a EPS),
-    y un array embebido <code>historia_clinica</code>.
-    Cada entrada de la historia clínica incluye los campos: <code>fecha</code>, <code>motivo</code>, <code>diagnóstico</code>, <code>tratamiento</code> y <code>medicoId</code> (como referencia lógica).
-  </li>
-</ul>
-
-<p>
-  En conjunto, el modelo lógico usa referencias por UUID para establecer relaciones entre documentos, evita <em>joins</em> complejos al embedir información relevante (como la historia clínica),
-  y favorece la consulta eficiente en contextos médicos, manteniendo una estructura flexible y escalable.
-</p>
+De esta manera, el modelo asegura un control eficiente de los procesos clave del sistema sin depender de esquemas rígidos.
 
 <h3 id="gráfica-1">Gráfica</h3>
 
