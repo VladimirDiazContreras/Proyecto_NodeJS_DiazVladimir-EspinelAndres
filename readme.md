@@ -1,5 +1,14 @@
 ## Proyecto de Node JS Vladimir Diaz - Andres Espinel - Edgar Acevedo
 
+# Desarrollo de una App en comando de Linea
+
+La gestión eficiente de información es esencial para empresas y profesionales freelance que manejan múltiples proyectos y clientes de forma simultánea. Tradicionalmente, muchas de estas organizaciones dependen de hojas de cálculo y documentos dispersos, lo que conlleva problemas como pérdida de datos, duplicidad de registros y dificultades para el seguimiento integral de los proyectos.
+
+En respuesta a esta necesidad, el presente proyecto propone el desarrollo de una aplicación de línea de comandos (CLI) construida totalmente en Node.js. Esta herramienta está diseñada para centralizar y automatizar la gestión del portafolio profesional de freelancers, permitiendo controlar y organizar clientes, propuestas, contratos, proyectos, entregables y finanzas desde un único sistema.
+
+La aplicación hace uso de tecnologías y metodologías modernas, como la programación orientada a objetos, principios SOLID, patrones de diseño y persistencia segura de datos con MongoDB. Así, ofrece una solución robusta, escalable y adaptada a las demandas reales del entorno freelance, optimizando los procesos internos y elevando la calidad de la gestión profesional.
+
+
 // ================== DOCUMENTACIÓN DEL MODELO DE DATOS EN MONGODB ==================
 
 /*
