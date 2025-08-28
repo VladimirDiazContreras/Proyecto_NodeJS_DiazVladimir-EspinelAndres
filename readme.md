@@ -165,7 +165,7 @@ idUsuario (FK): Usuario asociado al registro de pago.
 
 
 
-#:collision: ===== DOCUMENTACIÓN DEL MODELO DE DATOS EN MONGODB ========= :collision:
+# :collision: ===== DOCUMENTACIÓN DEL MODELO DE DATOS EN MONGODB ========= :collision:
 
 /*
   Este conjunto de colecciones representa un sistema de gestión de proyectos.
@@ -173,7 +173,7 @@ idUsuario (FK): Usuario asociado al registro de pago.
   que vinculan documentos de una colección con documentos de otra.
 */
 
-##:construction_worker:  ===== CLIENTES ==== :construction_worker:
+## :construction_worker:  ===== CLIENTES ==== :construction_worker:
 /*
   #Colección 'clientes': Almacena información sobre los clientes de la empresa.
   Campos:
@@ -193,7 +193,7 @@ db.clientes.insertMany([
 ]);
 ```
 
-##:man: ====== USUARIOS ========== 	:man:
+## :man: ====== USUARIOS ========== 	:man:
 
   Colección 'usuarios': Contiene los datos de los empleados o personal de la empresa.
   Campos:
@@ -212,7 +212,7 @@ db.usuarios.insertMany([
 ]);
 ```
 
-##:hourglass: ===== PROPUESTAS ========= :hourglass:
+## :hourglass: ===== PROPUESTAS ========= :hourglass:
 /*
   Colección 'propuestas': Registra las propuestas comerciales enviadas a los clientes.
   Campos:
@@ -227,7 +227,7 @@ db.propuestas.insertMany([
   { _id: ObjectId("64c1c3333333333333333332"), estado: "Aprobada", id_usuario: ObjectId("64c1b2222222222222222222"), id_cliente: ObjectId("64c1a1111111111111111112") }
 ]);
 ```
-##:bar_chart: ====== PROYECTOS ====== :bar_chart:
+## :bar_chart: ====== PROYECTOS ====== :bar_chart:
 /*
   Colección 'proyectos': Contiene los proyectos activos que se están desarrollando.
   Campos:
@@ -260,7 +260,7 @@ db.contratos.insertMany([
   { _id: ObjectId("64c1e5555555555555555552"), id_proyecto: ObjectId("64c1d4444444444444444442"), fecha_inicio: ISODate("2025-02-01"), fecha_fin: ISODate("2025-07-01"), descripcion: "Contrato para app móvil de clientes", estado: "Activo" }
 ]);
 ```
-## // :chart_with_upwards_trend: === GESTION FINANCIERA ======= :chart_with_upwards_trend:
+## :chart_with_upwards_trend: === GESTION FINANCIERA ======= :chart_with_upwards_trend:
 /*
   Colección 'gestion_financiera': Registra los movimientos financieros de cada proyecto.
   Campos:
