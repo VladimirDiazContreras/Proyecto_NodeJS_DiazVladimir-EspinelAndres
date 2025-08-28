@@ -9,9 +9,9 @@
 &nbsp;  
 
 
-**Vladmir Diaz Contreras**  
-**Andrés David Reyes Espinel**
-**Edgar Leonardo Acevedo Arteaga**
+**Vladmir Diaz Contreras** <br> 
+**Andrés David Reyes Espinel**<br>
+**Edgar Leonardo Acevedo Arteaga**<br>
 
 
 
