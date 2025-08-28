@@ -17,9 +17,10 @@ function menuUsuarios(callbackVolver) {
   console.log("2) Listar usuarios");
   console.log("3) Actualizar contraseña");
   console.log("4) Eliminar usuario");
-  console.log("5) Volver al menú principal");
+  console.log("5) menu de propuestas");
+  console.log("6) Volver al menú principal");
 
-  rl.question("\nSeleccione una opción [1-5]: ", (opcion) => {
+  rl.question("\nSeleccione una opción [1-6]: ", (opcion) => {
     if (opcion === "1") {
       rl.question("Nombre: ", (nombre) => {
         rl.question("Contraseña: ", async (contrasena) => {
@@ -42,9 +43,12 @@ function menuUsuarios(callbackVolver) {
         await eliminarUsuario(nombre);
         setTimeout(() => menuUsuarios(callbackVolver), 2000);
       });
-    } else if (opcion === "5") {
-      callbackVolver();
-    } else {
+    }  else if (opcion === "5") {
+  const { menuPropuestas } = require('./propuestasView');
+  menuPropuestas(() => menuClientes(callbackVolver));
+} else if (opcion === "6") {
+  callbackVolver();
+} else {
       console.log("\n❌ Opción inválida");
       setTimeout(() => menuUsuarios(callbackVolver), 1500);
     }

@@ -16,9 +16,10 @@ function menuClientes(callbackVolver) {
   console.log("2) Listar clientes");
   console.log("3) Actualizar contraseña");
   console.log("4) Eliminar cliente");
-  console.log("5) Volver al menú principal");
+  console.log("5) menu de propuestas");
+  console.log("6) Volver al menú principal");
 
-  rl.question("\nSeleccione una opción [1-5]: ", (opcion) => {
+  rl.question("\nSeleccione una opción [1-6]: ", (opcion) => {
     if (opcion === "1") {
       rl.question("Nombre: ", (nombre) => {
         rl.question("Contraseña: ", async (contrasena) => {
@@ -41,9 +42,13 @@ function menuClientes(callbackVolver) {
         await eliminarCliente(nombre);
         setTimeout(() => menuClientes(callbackVolver), 2000);
       });
-    } else if (opcion === "5") {
-      callbackVolver();
-    } else {
+    }  else if (opcion === "5") {
+  const { menuPropuestas } = require('./propuestasView');
+  menuPropuestas(() => menuClientes(callbackVolver));
+} else if (opcion === "6") {
+  callbackVolver();
+}
+     else {
       console.log("\n❌ Opción inválida");
       setTimeout(() => menuClientes(callbackVolver), 1500);
     }
