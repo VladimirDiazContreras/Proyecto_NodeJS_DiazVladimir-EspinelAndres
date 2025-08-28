@@ -1,4 +1,14 @@
-## Proyecto de Node JS Vladimir Diaz - Andres Espinel - Edgar Acevedo
+# Proyecto de Node JS Vladimir Diaz - Andres Espinel - Edgar Acevedo
+
+# Herramienta de Gestion aplicado en el Proyecto 
+Link: 
+https://diazc04080910-1755863033586.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiMjI3NjhmNGNjYTdjNDA3ZGJjODQ4MzZlNTRiYmIwMDgiLCJwIjoiaiJ9
+Nota: Con la herraminta Jira se crea un desglose detallado de las actividades a realizar enmarcando un trabajo ordenado y estructurado para que de esa forma se logre el objetivo
+
+# Product Backlog 
+Link: 
+https://docs.google.com/document/d/1HU8xuiVEsxjC_8uNe1Kb4n2Fv1vZDI2J_JBolTeEdq8/edit?usp=sharing 
+Nota: Aca se refleja el informe de casos de usos o requermientos en un marco metodologico aplicando SCRUM
 
 # Desarrollo de una App en comando de Linea
 
@@ -9,7 +19,7 @@ En respuesta a esta necesidad, el presente proyecto propone el desarrollo de una
 La aplicación hace uso de tecnologías y metodologías modernas, como la programación orientada a objetos, principios SOLID, patrones de diseño y persistencia segura de datos con MongoDB. Así, ofrece una solución robusta, escalable y adaptada a las demandas reales del entorno freelance, optimizando los procesos internos y elevando la calidad de la gestión profesional.
 
 
-// ================== DOCUMENTACIÓN DEL MODELO DE DATOS EN MONGODB ==================
+# // ================== DOCUMENTACIÓN DEL MODELO DE DATOS EN MONGODB ==================
 
 /*
   Este conjunto de colecciones representa un sistema de gestión de proyectos.
@@ -17,7 +27,7 @@ La aplicación hace uso de tecnologías y metodologías modernas, como la progra
   que vinculan documentos de una colección con documentos de otra.
 */
 
-// ================== CLIENTES ==================
+## // ================== CLIENTES ==================
 /*
   #Colección 'clientes': Almacena información sobre los clientes de la empresa.
   Campos:
@@ -37,7 +47,7 @@ db.clientes.insertMany([
 ]);
 ```
 
-// ================== USUARIOS ==================
+## // ================== USUARIOS ==================
 
   Colección 'usuarios': Contiene los datos de los empleados o personal de la empresa.
   Campos:
@@ -56,7 +66,7 @@ db.usuarios.insertMany([
 ]);
 ```
 
-// ================== PROPUESTAS ==================
+## // ================== PROPUESTAS ==================
 /*
   Colección 'propuestas': Registra las propuestas comerciales enviadas a los clientes.
   Campos:
@@ -71,7 +81,7 @@ db.propuestas.insertMany([
   { _id: ObjectId("64c1c3333333333333333332"), estado: "Aprobada", id_usuario: ObjectId("64c1b2222222222222222222"), id_cliente: ObjectId("64c1a1111111111111111112") }
 ]);
 ```
-// ================== PROYECTOS ==================
+## // ================== PROYECTOS ==================
 /*
   Colección 'proyectos': Contiene los proyectos activos que se están desarrollando.
   Campos:
@@ -87,7 +97,7 @@ db.proyectos.insertMany([
   { _id: ObjectId("64c1d4444444444444444442"), estado: "Planeación", id_usuario: ObjectId("64c1b2222222222222222222"), id_cliente: ObjectId("64c1a1111111111111111112"), id_propuesta: ObjectId("64c1c3333333333333333332") }
 ]);
 ```
-// ================== CONTRATOS ==================
+## // ================== CONTRATOS ==================
 /*
   Colección 'contratos': Almacena los acuerdos formales relacionados con los proyectos.
   Campos:
@@ -104,7 +114,7 @@ db.contratos.insertMany([
   { _id: ObjectId("64c1e5555555555555555552"), id_proyecto: ObjectId("64c1d4444444444444444442"), fecha_inicio: ISODate("2025-02-01"), fecha_fin: ISODate("2025-07-01"), descripcion: "Contrato para app móvil de clientes", estado: "Activo" }
 ]);
 ```
-// ================== GESTION FINANCIERA ==================
+## // ================== GESTION FINANCIERA ==================
 /*
   Colección 'gestion_financiera': Registra los movimientos financieros de cada proyecto.
   Campos:
@@ -116,7 +126,9 @@ db.contratos.insertMany([
   - fecha: ISODate, fecha del movimiento.
   - monto: Number, cantidad del movimiento financiero.
 */
+
 ``` js
+
 db.gestion_financiera.insertMany([
   // Movimientos para el Proyecto 1
   { _id: ObjectId("64c1f6666666666666666661"), id_proyecto: ObjectId("64c1d4444444444444444441"), descripcion: "Pago inicial", presupuesto: 1000000, tipo_movimiento: "Ingreso", fecha: ISODate("2025-01-05"), monto: 500000 },
@@ -129,3 +141,10 @@ db.gestion_financiera.insertMany([
   { _id: ObjectId("64c1f6666666666666666673"), id_proyecto: ObjectId("64c1d4444444444444444442"), descripcion: "Segundo abono cliente", presupuesto: 1500000, tipo_movimiento: "Ingreso", fecha: ISODate("2025-04-01"), monto: 400000 }
 ]);
 ```
+
+# Desarrollado Por: 
+
+- Andrés David Reyes Espinel
+- Vladímir Díaz Contreras
+- Edgar Leonardo Acevedo Arteaga
+
