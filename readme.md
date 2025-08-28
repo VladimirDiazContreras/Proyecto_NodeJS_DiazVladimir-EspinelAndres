@@ -8,12 +8,10 @@
 &nbsp;  
 &nbsp;  
 
+
 **Vladmir Diaz Contreras**  
 **Andrés David Reyes Espinel**
-**Edgar Leonardo Acevedo Arteaga **
-
-
-
+**Edgar Leonardo Acevedo Arteaga**
 
 
 
@@ -42,9 +40,6 @@
 <br>
 </div>
 <br>
-
-#
-
 <br>
 <br>
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
