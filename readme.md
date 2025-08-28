@@ -3,11 +3,13 @@
 # Herramienta de Gestion aplicado en el Proyecto 
 Link: 
 https://diazc04080910-1755863033586.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiMjI3NjhmNGNjYTdjNDA3ZGJjODQ4MzZlNTRiYmIwMDgiLCJwIjoiaiJ9
+
 Nota: Con la herraminta Jira se crea un desglose detallado de las actividades a realizar enmarcando un trabajo ordenado y estructurado para que de esa forma se logre el objetivo
 
 # Product Backlog 
 Link: 
 https://docs.google.com/document/d/1HU8xuiVEsxjC_8uNe1Kb4n2Fv1vZDI2J_JBolTeEdq8/edit?usp=sharing 
+
 Nota: Aca se refleja el informe de casos de usos o requermientos en un marco metodologico aplicando SCRUM
 
 # Desarrollo de una App en comando de Linea
