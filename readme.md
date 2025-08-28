@@ -12,6 +12,7 @@ https://docs.google.com/document/d/1HU8xuiVEsxjC_8uNe1Kb4n2Fv1vZDI2J_JBolTeEdq8/
 
 Nota: Aca se refleja el informe de casos de usos o requermientos en un marco metodologico aplicando SCRUM
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # :runner: Desarrollo de una App en comando de Linea :runner:
 
 La gestión eficiente de información es esencial para empresas y profesionales freelance que manejan múltiples proyectos y clientes de forma simultánea. Tradicionalmente, muchas de estas organizaciones dependen de hojas de cálculo y documentos dispersos, lo que conlleva problemas como pérdida de datos, duplicidad de registros y dificultades para el seguimiento integral de los proyectos.
@@ -37,6 +38,7 @@ En este contexto, se plantea el desarrollo de una aplicación de línea de coman
 
 1- Construcción del Modelo Conceptual
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Tabla Cliente :construction_worker:
 
 Descripción: Almacena la información de los clientes registrados en el sistema.
@@ -50,8 +52,7 @@ nombre: Nombre del cliente.
 
 correo: Correo electrónico del cliente (único).
 
-
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Tabla Propuesta :hourglass:
 
 Descripción: Contiene las propuestas asociadas a un cliente.
@@ -64,8 +65,7 @@ estado: Estado actual de la propuesta (pendiente, aceptada, rechazada).
 
 idCliente (FK): Relación con el cliente que la solicitó.
 
-
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Tabla Proyecto :bar_chart:
 
 Descripción: Representa los proyectos generados a partir de propuestas aprobadas.
@@ -82,9 +82,9 @@ idCliente (FK): Cliente al que pertenece el proyecto.
 
 idPropuesta (FK): Propuesta de la que surge el proyecto.
 
-
-
-- Tabla Usuario 	:trophy:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Tabla Usuario:dart:
+  
 Descripción: Registra los datos de usuarios que interactúan en el sistema (gestores, administradores, etc.).
  
 
@@ -97,9 +97,8 @@ nombre: Nombre del usuario.
 
 correo: Correo electrónico del usuario (único).
 
-
-
-- Tabla Administrativo 	:dart:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Tabla Administrativo:memo:
 
 Descripción: Contiene a los usuarios con rol administrativo vinculados directamente a proyectos.
  Atributos:
@@ -114,8 +113,7 @@ correo: Correo electrónico.
 
 idProyecto (FK): Proyecto que administra.
 
-
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Tabla Grupo :pencil:
 
 Descripción: Define grupos de trabajo donde participan distintos usuarios.
@@ -129,8 +127,7 @@ descripcion: Breve descripción del grupo.
 
 idUsuario (FK): Usuario que integra el grupo.
 
-
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Tabla Gestión Financiera :books:
 
 Descripción: Registra los procesos financieros gestionados por usuarios del sistema.
@@ -147,8 +144,7 @@ correo: Correo electrónico de referencia.
 
 idUsuario (FK): Usuario responsable de la gestión financiera.
 
-
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Tabla Gestión de Pagos :chart_with_upwards_trend:
 
 Descripción: Almacena los pagos realizados dentro del sistema.
@@ -162,9 +158,7 @@ descripcion: Concepto del pago.
 
 idUsuario (FK): Usuario asociado al registro de pago.
 
-
-
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # :collision: ===== DOCUMENTACIÓN DEL MODELO DE DATOS EN MONGODB ========= :collision:
 
 /*
