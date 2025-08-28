@@ -19,10 +19,11 @@ function menuUsuarios(callbackVolver) {
   console.log("4) Eliminar usuario");
   console.log("5) Gestionar propuestas");
   console.log("6) Gestionar proyectos");
-  console.log("7) Volver al menú principal");
+  console.log("7) Gestionar contratos");
+  console.log("8) Volver al menú principal");
 
 
-  rl.question("\nSeleccione una opción [1-7]: ", (opcion) => {
+  rl.question("\nSeleccione una opción [1-8]: ", (opcion) => {
     if (opcion === "1") {
       rl.question("Nombre: ", (nombre) => {
         rl.question("Contraseña: ", async (contrasena) => {
@@ -48,10 +49,10 @@ function menuUsuarios(callbackVolver) {
     }   else if (opcion === "5") {
   const { menuPropuestas } = require('./propuestasView');
   menuPropuestas(() => menuClientes(callbackVolver)); // o menuUsuarios
-} else if (opcion === "6") {
-  const { menuProyectos } = require('./proyectosView');
-  menuProyectos(() => menuClientes(callbackVolver)); // o menuUsuarios
 } else if (opcion === "7") {
+  const { menuContratos } = require('./contratosView');
+  menuContratos(() => menuClientes(callbackVolver)); // o menuUsuarios
+} else if (opcion === "8") {
   callbackVolver();
 } else {
       console.log("\n❌ Opción inválida");
