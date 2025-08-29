@@ -178,7 +178,7 @@ En este contexto, se plantea el desarrollo de una aplicación de línea de coman
 <h3 id="gráfica">Gráfica</h3>
 
 <div align="center">
-  <img src="./imagenes/Diagrama" alt="Modelo Conceptual" width="800px">
+  <img src="./imagenes/Diagrama.png" alt="Modelo Conceptual" width="800px">
   <br><br>
 </div>
 
@@ -207,7 +207,7 @@ De esta manera, el modelo asegura un control eficiente de los procesos clave del
 <h3 id="gráfica-1">Gráfica</h3>
 
 <div align="center">
-  <img src="./imagenes/proyecto" alt="Modelo Conceptual" width="800px">
+  <img src="./imagenes/proyecto.png" alt="Modelo Conceptual" width="800px">
   <br><br>
 </div>
 
