@@ -47,51 +47,34 @@
 
 - [Introducción](#introducción)
 - [Caso de Estudio](#caso-de-estudio)
-- [Planificación](#planificación)
 - [Construcción del Modelo Conceptual](#construcción-del-modelo-conceptual)
   - [Descripción](#descripción)
   - [Gráfica](#gráfica)
-  - [Descripción Técnica](#descripción-técnica)
 - [Construcción del Modelo Lógico](#construcción-del-modelo-lógico)
   - [Descripción](#descripción-1)
   - [Gráfica](#gráfica-1)
-  - [Descripción Técnica](#descripción-técnica-1)
 - [Normalización del Modelo Lógico](#normalización-del-modelo-lógico)
   - [Primera Forma Normal (1FN)](#primera-forma-normal-1fn)
     - [Descripción](#descripción-2)
-    - [Gráfica](#gráfica-2)
-    - [Descripción Técnica](#descripción-técnica-2)
   - [Segunda Forma Normal (2FN)](#segunda-forma-normal-2fn)
     - [Descripción](#descripción-3)
-    - [Gráfica](#gráfica-3)
-    - [Descripción Técnica](#descripción-técnica-3)
   - [Tercera Forma Normal (3FN)](#tercera-forma-normal-3fn)
     - [Descripción](#descripción-4)
-    - [Gráfica](#gráfica-4)
-    - [Descripción Técnica](#descripción-técnica-4)
 - [Construcción del Modelo Físico](#construcción-del-modelo-físico)
   - [Descripción](#descripción-5)
   - [Código](#código)
-  - [Descripción Técnica](#descripción-técnica-5)
 - [Diagrama E-R](#diagrama-e-r)
   - [Descripción](#descripción-6)
-  - [Gráfica](#gráfica-5)
-  - [Descripción Técnica](#descripción-técnica-6)
 - [Tablas](#tablas)
   - [Descripción](#descripción-7)
-  - [Gráfica](#gráfica-6)
-  - [Descripción Técnica](#descripción-técnica-7)
 - [Relaciones entre Tablas](#relaciones-entre-tablas)
   - [Descripción](#descripción-8)
-  - [Gráfica](#gráfica-7)
-  - [Descripción Técnica](#descripción-técnica-8)
 - [Inserción de Datos](#inserción-de-datos)
   - [Descripción](#descripción-9)
-  - [Gráfica](#gráfica-8)
-  - [Descripción Técnica](#descripción-técnica-9)
-- [Referencias](#referencias)
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Introducción
 
 La gestión eficiente de información es esencial para empresas y profesionales freelance que manejan múltiples proyectos y clientes de forma simultánea. Tradicionalmente, muchas de estas organizaciones dependen de hojas de cálculo y documentos dispersos, lo que conlleva problemas como pérdida de datos, duplicidad de registros y dificultades para el seguimiento integral de los proyectos.
@@ -195,9 +178,8 @@ En este contexto, se plantea el desarrollo de una aplicación de línea de coman
 <h3 id="gráfica">Gráfica</h3>
 
 <div align="center">
-  <img src="./img/DiagramaModeloConseptual.png" alt="Modelo Conceptual" width="800px">
+  <img src="./imagenes/Diagrama" alt="Modelo Conceptual" width="800px">
   <br><br>
-  <a href="https://drive.google.com/file/d/1TrpyUwY_rDEoA1gYqghtMEs9JYpaQpoM/view?usp=sharing" target="_blank"> 🔗 Ver en Draw.io</a>
 </div>
 
 <h3 id="descripción-técnica">Descripción Técnica</h3>
@@ -225,54 +207,22 @@ De esta manera, el modelo asegura un control eficiente de los procesos clave del
 <h3 id="gráfica-1">Gráfica</h3>
 
 <div align="center">
-  <img src="./img/DiagramaMermaid.png" alt="Modelo Conceptual" width="800px">
+  <img src="./imagenes/proyecto" alt="Modelo Conceptual" width="800px">
   <br><br>
-  <a href="https://mermaid.live/edit#pako:eNqlVttuozAQ_RXk56RK7w1viLBbpAQqSPdhFSlyYUKsBRsZU22b5N_XJtwKpJvd8hTbx2cuZ8aTHQpYCEhHwGcERxwnK6rJb2E7vjF_nmn7_XjMdpr15Gu6xiHKYzyMeHT9J3tpzCUsy1PgrySTyCNW3S5hT4ZpW87SkjC8ITEp2ertAxuP93vt0faXrmcba3NuO7ZpSLggQGEALUlNaVgRRkDD2mjtUGXZ8nzXKRyEJI0BD8NMY6G4AkZbBrughTWzTVeZzEhETzD5lvfDNm0FYxsOAVSe1Z502QgN4vwNhlGW883yFpb3AVhqcSSoIiizofwPYQgxkF3IAk5eBtFLz1gaC5Vwt6iBAESjbO1UZfzZnhmzIxDH5L1GFl4pkFTXdB3_ea5cUMAM1iV2DQPgR9dTDrIg5xzWDV-LoyqapgRlAQqpXtC60Au69HhmG98d118eJejofuLOx5R01GgfthU2FiU-bzqjSlcZa6s7QsJJRELWBNAm2R231JcJTmikUZa8cOhtpxwyoAIHhNHeoQw2kIe8dXqoi7RypW-KhH-1HmIBGpW8iUymYD28jA6CAatl5f2XzXIbshQCIuspxGGHvanWrxgQOaesw1wU7OekRUo2EGxxD5YwQV57lK0C_5yZUKHRPAHez3NKsi5v3SVfycEp_dRL_8-8jfrVTNmdh--157kKrLF6IHKOO4Ttt6DPFRaPZDoQdrvlB3ygIQmKHoOsK3LZ__1LgqR9OdlLJifrMFU9L76iK2dxh7aeYmdqUszPs1yATOCQnS7jVsV6Q5RbxvGaUCKzMXy2IZVOaIQiTkKkC57DCEkbCVZLVLCukNhCAiuky58h5r9WaEXVnRTTn4wl1TXO8miL9A2OM7nKU1VP5b-mGqJGLjdZTgXSr-4KCqTv0G-5epheXF9eTic3l5PpZDpCb2rv4ub6_ubh9vp2cjW9u7q7P4zQe2FycvFwf3v4A41k2uo" target="_blank">🔗 Ver en Draw.io</a>
 </div>
-
-
-
 
 
 <h3 id="descripción-técnica-1">Descripción Técnica</h3>
 
 <p>
-  El modelo lógico general del sistema hospitalario define múltiples colecciones interrelacionadas en una base de datos MongoDB,
+  El modelo lógico general del sistema freelance define múltiples colecciones interrelacionadas en una base de datos MongoDB,
   representadas por entidades clave.
 </p>
 
-<p>
-  La colección <strong>hospitales</strong> contiene identificadores únicos (<code>_id</code>), junto con datos como <code>nombre</code>, <code>direccion</code>, <code>telefono</code>
-  y una lista de <code>areas</code> que representan las unidades médicas disponibles.
-</p>
 
 <p>
-  La colección <strong>medicos</strong> incluye su propio <code>_id</code>, <code>nombre</code>, <code>hospitalId</code> (como referencia lógica al hospital donde labora),
-  <code>area</code>, <code>especialidad</code>, <code>registro_medico</code> y un arreglo de <code>obligaciones</code>.
-</p>
-
-<p>
-  De forma similar, la colección <strong>administrativos</strong> almacena funcionarios vinculados a un hospital mediante el campo <code>hospitalId</code>,
-  con sus respectivos <code>cargos</code> y <code>obligaciones</code>.
-</p>
-
-<p>
-  Por otro lado, la colección <strong>pacientes</strong> incluye campos como <code>_id</code>, <code>nombre</code>, <code>tipo_documento</code>,
-  <code>numero_documento</code>, <code>fecha_nacimiento</code>, <code>direccion</code>, <code>telefono</code>,
-  el identificador de su EPS (<code>epsId</code>), un arreglo de <code>obligaciones</code>,
-  y una subestructura llamada <code>historia_clinica</code>, que es una lista de objetos con los campos <code>fecha</code>, <code>motivo</code>,
-  <code>diagnostico</code>, <code>medicoId</code> (como referencia al médico tratante) y <code>tratamiento</code>.
-</p>
-
-<p>
-  Finalmente, la colección <strong>eps</strong> está compuesta por <code>_id</code>, <code>nombre</code>,
-  una lista de <code>responsabilidades</code> y un subdocumento embebido <strong>Director_EPS</strong>,
-  que a su vez incluye un <code>_id</code>, <code>nombre</code>, <code>tipo_de_usuario</code> y sus <code>obligaciones</code>.
-</p>
-
-<p>
-  Las relaciones entre entidades se manejan mediante referencias UUID, sin cambiar la estructura original del JSON,
-  permitiendo una integración lógica limpia y flexible entre hospitales, personal, pacientes y entes externos como las EPS.
+  Las relaciones entre entidades se manejan mediante referencias, sin cambiar la estructura original del JSON,
+  permitiendo una integración lógica limpia y flexible 
 </p>
 
 
