@@ -46,10 +46,23 @@ async function eliminarPropuesta(titulo) {
     console.log("\n❌ Error al eliminar propuesta:", err.message);
   }
 }
+async function pasarpropuestaProyecto(titulo) {
+  try {
+    const result = await Propuesta.pasarpropuestaProyecto(titulo.trim());
+    if (result.success) {
+      console.log(`\n✅ ${result.message}`);
+    } else {
+      console.log(`\n❌ ${result.message}`);
+    }
+  } catch (err) {
+    console.log("\n❌ Error al pasar la propuesta a proyecto:", err.message);
+  }
+}
 
 module.exports = {
   crearPropuesta,
   listarPropuestas,
   actualizarPropuesta,
-  eliminarPropuesta
+  eliminarPropuesta,
+  pasarpropuestaProyecto
 };

@@ -15,8 +15,8 @@ function menuPropuestas(callbackVolver) {
   console.log("2) Listar propuestas");
   console.log("3) Actualizar propuesta");
   console.log("4) Eliminar propuesta");
-  console.log("5) Volver al menú anterior");
-
+  console.log("5) Pasar propuesta a proyecto"); // <-- New Option
+  console.log("6) Volver al menú anterior");   // <-- Option number changed to 6
   rl.question("\nSeleccione una opción [1-5]: ", (opcion) => {
     if (opcion === "1") {
       rl.question("Título: ", (titulo) => {
@@ -44,7 +44,12 @@ function menuPropuestas(callbackVolver) {
         await eliminarPropuesta(titulo);
         setTimeout(() => menuPropuestas(callbackVolver), 2000);
       });
-    } else if (opcion === "5") {
+    } else if (opcion === "5") { // <-- New Logic
+      rl.question("Título de la propuesta para pasar a proyecto: ", async (titulo) => {
+        await pasarpropuestaProyecto(titulo);
+        setTimeout(() => menuPropuestas(callbackVolver), 2000);
+      });
+    } else if (opcion === "6") { // <-- New Logic
       callbackVolver();
     } else {
       console.log("\n❌ Opción inválida");
