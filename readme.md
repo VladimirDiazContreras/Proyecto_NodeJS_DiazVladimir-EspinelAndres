@@ -180,6 +180,10 @@ En este contexto, se plantea el desarrollo de una aplicación de línea de coman
 <div align="center">
   <img src="./imagenes/Diagrama.png" alt="Modelo Conceptual" width="800px">
   <br><br>
+</div> 
+<div align="center">
+  <img src="./imagenes/Diagrama.png" alt="Modelo Conceptual" width="800px">
+  <br><br>
 </div>
 
 <h3 id="descripción-técnica">Descripción Técnica</h3>
