@@ -1,0 +1,16 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+
+# Archivos de log
+*.log
+
+# Configuraciones del editor
+.vscode/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+ 

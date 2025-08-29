@@ -1,4 +1,7 @@
 <div align="center">
+<br>
+<br>
+<br>
 
 # PROYECTO NODE.JS
 
@@ -19,7 +22,11 @@
 &nbsp;  
 &nbsp;  
  
+
+
 **GRUPO S1 CAJASAN**  
+
+
 &nbsp;  
 &nbsp;  
 &nbsp;  
@@ -42,14 +49,15 @@
 <br>
 <br>
 <br>
------------------------------------------------------------------------------------------------
-## Tabla de Contenidos
 
-- [Introducción](#introducción)
-- [Caso de Estudio](#caso-de-estudio)
+
+# Tabla de Contenidos
+
+- [Introducción](#Introducción)
+- [Caso de Estudio](#Caso-de-Estudio)
 - [Planificación](#planificación)
-- [Construcción del Modelo Conceptual](#construcción-del-modelo-conceptual)
-  - [Descripción](#descripción)
+- [Construcción del Modelo Conceptual](#Construcción-del-Modelo-Conceptual)
+  - [Descripción](#Descripción)
   - [Gráfica](#gráfica)
   - [Descripción Técnica](#descripción-técnica)
 - [Construcción del Modelo Lógico](#construcción-del-modelo-lógico)
@@ -101,9 +109,12 @@ A raíz de esta problemática, se evidenció la necesidad de una herramienta cen
 En este contexto, se plantea el desarrollo de una aplicación de línea de comandos (CLI) utilizando Node.js, que permita a la empresa registrar, consultar, modificar y controlar toda la información relevante de su operación: clientes, propuestas, proyectos, contratos, entregables y aspectos financieros. De este modo, se busca transformar el proceso de gestión tradicional en un flujo moderno, confiable y alineado con las mejores prácticas tecnológicas actuales.
 
 
-<h2 id="construcción-del-modelo-conceptual">Construcción del Modelo Conceptual</h2>
+# Construcción del Modelo Conceptual
 
-<h3 id="descripción">Descripción</h3>
+El proyecto consiste en el desarrollo de un sistema de software basado en Node.js, diseñado para gestionar operaciones financieras y administrativas de manera segura y eficiente. Este sistema incluye funcionalidades CRUD (crear, leer, actualizar, eliminar) para manejar clientes, propuestas, tareas, entregables y finanzas, con un enfoque especial en la integridad transaccional para garantizar la coherencia de los datos.
+
+
+## Descripción
 
 <h4>Entidades y atributos principales:</h4>
 
@@ -183,12 +194,13 @@ En este contexto, se plantea el desarrollo de una aplicación de línea de coman
     <p><strong>Descripción:Almacena los pagos realizados dentro del sistema </strong> </p>
   </li>
 </ol>
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3 id="gráfica">Gráfica</h3>
 
 <div align="center">
-  <img src="./imagenes/Proyecto.png" alt="Modelo Conceptual" width="800px">
+  <img src="./imagenes /proyecto.png" alt="Modelo Conceptual" width="800px">
   <br><br>
 </div>
 
@@ -217,7 +229,7 @@ De esta manera, el modelo asegura un control eficiente de los procesos clave del
 <h3 id="gráfica-1">Gráfica</h3>
 
 <div align="center">
-  <img src="./imagenes/Diagrama.png" alt="Modelo Conceptual" width="800px">
+  <img src="./imagenes /Diagrama.png" alt="Modelo Conceptual" width="800px">
   <br><br>
 </div>
 
