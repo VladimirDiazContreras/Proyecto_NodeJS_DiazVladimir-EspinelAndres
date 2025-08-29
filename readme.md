@@ -42,27 +42,37 @@
 <br>
 <br>
 <br>
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 ## Tabla de Contenidos
 
 - [Introducción](#introducción)
 - [Caso de Estudio](#caso-de-estudio)
+- [Planificación](#planificación)
 - [Construcción del Modelo Conceptual](#construcción-del-modelo-conceptual)
   - [Descripción](#descripción)
   - [Gráfica](#gráfica)
+  - [Descripción Técnica](#descripción-técnica)
 - [Construcción del Modelo Lógico](#construcción-del-modelo-lógico)
   - [Descripción](#descripción-1)
   - [Gráfica](#gráfica-1)
+  - [Descripción Técnica](#descripción-técnica-1)
 - [Normalización del Modelo Lógico](#normalización-del-modelo-lógico)
   - [Primera Forma Normal (1FN)](#primera-forma-normal-1fn)
     - [Descripción](#descripción-2)
+    - [Gráfica](#gráfica-2)
+    - [Descripción Técnica](#descripción-técnica-2)
   - [Segunda Forma Normal (2FN)](#segunda-forma-normal-2fn)
     - [Descripción](#descripción-3)
+    - [Gráfica](#gráfica-3)
+    - [Descripción Técnica](#descripción-técnica-3)
   - [Tercera Forma Normal (3FN)](#tercera-forma-normal-3fn)
     - [Descripción](#descripción-4)
+    - [Gráfica](#gráfica-4)
+    - [Descripción Técnica](#descripción-técnica-4)
 - [Construcción del Modelo Físico](#construcción-del-modelo-físico)
   - [Descripción](#descripción-5)
   - [Código](#código)
+  - [Descripción Técnica](#descripción-técnica-5)
 - [Diagrama E-R](#diagrama-e-r)
   - [Descripción](#descripción-6)
 - [Tablas](#tablas)
@@ -74,7 +84,7 @@
 
 
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Introducción
 
 La gestión eficiente de información es esencial para empresas y profesionales freelance que manejan múltiples proyectos y clientes de forma simultánea. Tradicionalmente, muchas de estas organizaciones dependen de hojas de cálculo y documentos dispersos, lo que conlleva problemas como pérdida de datos, duplicidad de registros y dificultades para el seguimiento integral de los proyectos.
@@ -178,11 +188,7 @@ En este contexto, se plantea el desarrollo de una aplicación de línea de coman
 <h3 id="gráfica">Gráfica</h3>
 
 <div align="center">
-  <img src="./imagenes/Diagrama.png" alt="Modelo Conceptual" width="800px">
-  <br><br>
-</div> 
-<div align="center">
-  <img src="./imagenes/Diagrama.png" alt="Modelo Conceptual" width="800px">
+  <img src="./imagenes/Proyecto.png" alt="Modelo Conceptual" width="800px">
   <br><br>
 </div>
 
@@ -211,22 +217,20 @@ De esta manera, el modelo asegura un control eficiente de los procesos clave del
 <h3 id="gráfica-1">Gráfica</h3>
 
 <div align="center">
-  <img src="./imagenes/proyecto.png" alt="Modelo Conceptual" width="800px">
+  <img src="./imagenes/Diagrama.png" alt="Modelo Conceptual" width="800px">
   <br><br>
 </div>
-
 
 <h3 id="descripción-técnica-1">Descripción Técnica</h3>
 
 <p>
-  El modelo lógico general del sistema freelance define múltiples colecciones interrelacionadas en una base de datos MongoDB,
+  El modelo lógico general del sistema FREELANCE define múltiples colecciones interrelacionadas en una base de datos MongoDB,
   representadas por entidades clave.
 </p>
 
 
 <p>
-  Las relaciones entre entidades se manejan mediante referencias, sin cambiar la estructura original del JSON,
-  permitiendo una integración lógica limpia y flexible 
+  Las relaciones entre entidades se manejan mediante referencias, sin cambiar la estructura original del JSON,  permitiendo una integración lógica limpia y flexible entre TABLAS.
 </p>
 
 
